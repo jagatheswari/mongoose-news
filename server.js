@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 
+require('./routes')(app)
 
 // Connect to the Mongo DB
   require('mongoose').connect('mongodb://localhost/mongoose-news', { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true })
